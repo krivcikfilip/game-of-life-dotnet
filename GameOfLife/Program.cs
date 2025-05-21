@@ -8,7 +8,7 @@
         {
             Console.Clear();
             DrawGrid(simulation.CurrentGrid);
-            Thread.Sleep(5000);
+            Thread.Sleep(1000);
             simulation.Run();
         }
     }
