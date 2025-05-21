@@ -19,16 +19,9 @@ public class Simulation
                 var neighbours = CurrentGrid.CalculateCellNeighbours(row, col);
                 var currentType = CurrentGrid.Cells[row, col];
 
-                if (row == 0 && col == 0)
-                {
-                    Console.WriteLine($"TADY {currentType} {neighbours[OrganismType.HUMAN]} {neighbours[OrganismType.ZOMBIE]}");
-                }
-
                 // If there are two or three organisms of the same type living in the elements surrounding an organism of the same, type then it may survive.
                 if (neighbours[currentType] == 2 || neighbours[currentType] == 3)
                 {
-
-
                     newGrid.SetCell(row, col, currentType);
                     continue;
                 }
